@@ -34,7 +34,7 @@ val = value(0.1,'float_input')
 vector_multiply = vmul(val+1,vec)
 vector_multiply.x + 100
 ```
-![スクリーンショット 2023-11-26 012849](https://github.com/iodoform/NodeScript/assets/63995635/332b921c-dcb0-4e39-97f8-c01f94f7fcab)
+![数式ノード](img/math_nodes.png)
 
 `make_group()`関数を使って、自分で作成した数式をグループ化可能  
 グループ化時には`value`および`vector3`で作成されたノードは自動的にグループの入力に変換されます
@@ -46,7 +46,7 @@ vector_multiply = vmul(val+1,vec)
 group = vector_multiply.x + 100
 make_group(group,'test_group')
 ```
-![スクリーンショット 2023-11-26 013247](https://github.com/iodoform/NodeScript/assets/63995635/b3f392d9-5c5a-4a9e-a1db-35d835e9c9c5)
+![グループノード](img/group_node.png)
 ### 注意点
 以下のような数式はエラーになります。
 ```python
