@@ -33,7 +33,6 @@ val = value(0.1,'float_input')
 vector_multiply = vmul(val+1,vec)
 vector_multiply.x + 100
 ```
-![数式ノード](img/math_nodes.png)
 
 `make_group()`関数を使って、自分で作成した数式をグループ化可能  
 グループ化時には`value`および`vector3`で作成されたノードは自動的にグループの入力に変換されます
@@ -45,7 +44,6 @@ vector_multiply = vmul(val+1,vec)
 group = vector_multiply.x + 100
 make_group(group,'test_group')
 ```
-![グループノード](img/group_node.png)
 ### 注意点
 以下のような数式はエラーになります。
 ```python
