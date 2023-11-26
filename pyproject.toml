@@ -19,3 +19,5 @@ classifiers = [
 edit = [
     "fake-bpy-module",
 ]
+[tool.setuptools]
+package-dir = {"" = "node_script"}
