@@ -3,7 +3,6 @@ Blenderのシェーダーノードエディタに、Pythonで書いたスクリ�
 Blender内のPythonにpipでインストールして使用してください
 
 ## インストール方法(Windows)
-1. リポジトリをダウンロード
 1. PowerShellを管理者権限で起動し、BlenderのPythonが置かれたディレクトリに移動  
    デフォルトだと`C:\Program Files\Blender Foundation\Blender 4.0\4.0\python\bin`  
    Blenderのバージョンは各自読み替えてください
@@ -14,21 +13,21 @@ Blender内のPythonにpipでインストールして使用してください
     ```
     $ .\python.exe -m ensurepip
     ```
-1. BlenderのPythonが置かれたディレクトリに移動して`pip`でインストール
+1. `node_script`を`pip`でインストール
     ```
-    $ .\python.exe -m pip install NodeScript -e "ダウンロードしたリポジトリのパス"
+    $ .\python.exe -m pip install node_script
     ```
 1. （任意だけど推奨）Blender上だけでなくコードエディタ上でも使えたほうが便利なので、普段使用しているPythonにもインストールしてください  
-   NodeScriptの後ろに`[edit]`とつけると、`bpy`のコードエディタ上でのコード補間用モジュールである`fake-bpy-module`も一緒にインストールされます
+   `node_script`の後ろに`[edit]`とつけると、`bpy`のコードエディタ上でのコード補間用モジュールである`fake-bpy-module`も一緒にインストールされます
    ```
-    $ pip install NodeScript[edit] -e "ダウンロードしたリポジトリのパス"
+    $ pip install node_script[edit]
    ```
 ## 使用方法
 関数と演算子を使って数式ノードおよびベクトル演算ノードの接続を表現できます  
 ### 例
 
 ```python
-from NodeScript import *
+from node_script import *
 vec = vector3(1,2,3,'vector_input')
 val = value(0.1,'float_input')
 vector_multiply = vmul(val+1,vec)
@@ -39,7 +38,7 @@ vector_multiply.x + 100
 `make_group()`関数を使って、自分で作成した数式をグループ化可能  
 グループ化時には`value`および`vector3`で作成されたノードは自動的にグループの入力に変換されます
 ```python
-from NodeScript import *
+from node_script import *
 vec = vector3(1,2,3,'vector_input')
 val = value(0.1,'float_input')
 vector_multiply = vmul(val+1,vec)
@@ -50,7 +49,7 @@ make_group(group,'test_group')
 ### 注意点
 以下のような数式はエラーになります。
 ```python
-from NodeScript import *
+from node_script import *
 vec = vector3(1,2,3,'vector_input')
 val = value(0.1,'float_input')
 vector_multiply = vmul(val+1,vec)
