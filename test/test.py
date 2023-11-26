@@ -1,5 +1,5 @@
 import bpy
-from ..NodeScript import *
+from node_script import *
 function_list = [add,
     sub,
     mul,
