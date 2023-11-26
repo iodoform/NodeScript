@@ -1,5 +1,5 @@
 [project]
-name = "NodeScript"
+name = "node_script"
 version = "0.1"
 description = "This module assists in adding math nodes to Blender's shader node editor using Python scripts."
 authors = [
