@@ -1,0 +1,5 @@
+NodeScript.egg-info/*
+NodeScript/node_vector_math/__pycache__/*
+NodeScript/node_utils/__pycache__/*
+NodeScript/node_math/__pycache__/*
+NodeScript/__pycache__/*

@@ -1,0 +1,21 @@
+[project]
+name = "NodeScript"
+version = "0.1"
+description = "This module assists in adding math nodes to Blender's shader node editor using Python scripts."
+authors = [
+  {name = "iodoform"},
+]
+keywords = ["Blender"]
+readme = "README.md"
+requires-python = ">=3.10.13"
+license = {file = "LICENSE"}
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.10",
+]
+[project.optional-dependencies]
+edit = [
+    "fake-bpy-module",
+]
