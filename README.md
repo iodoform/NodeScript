@@ -13,15 +13,17 @@ Blender内のPythonにpipでインストールして使用してください
     ```
     $ .\python.exe -m ensurepip
     ```
-1. `node_script`を`pip`でインストール
+1. githubのリポジトリから`node_script`を`pip`でインストール
     ```
-    $ .\python.exe -m pip install node_script
+    $ .\python.exe -m pip install git+https://github.com/iodoform/NodeScript.git
     ```
+<!--
 1. （任意だけど推奨）Blender上だけでなくコードエディタ上でも使えたほうが便利なので、普段使用しているPythonにもインストールしてください  
    `node_script`の後ろに`[edit]`とつけると、`bpy`のコードエディタ上でのコード補間用モジュールである`fake-bpy-module`も一緒にインストールされます
    ```
     $ pip install node_script[edit]
    ```
+-->
 ## 使用方法
 関数と演算子を使って数式ノードおよびベクトル演算ノードの接続を表現できます  
 ### 例
